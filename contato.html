@@ -1,0 +1,90 @@
+<html>
+	<head></head>
+<script>
+	function validar(){
+		
+		var nome = form1.nome.value;
+		var email = form1.email.value;
+		var cidade = form1.cidade.value;
+			
+			if (nome==""){
+				alert("Campo nome obrigatório!");
+				form1.nome.focus();
+				return false;
+			}
+			if (email ==""){
+				alert("Campo email obrigatório!");
+				form1.email.focus();
+				return false;
+			}
+			if (cidade==""){
+				alert("Campo cidade obrigatório!");
+				form1.cidade.focus();
+				return false;
+			
+			}
+	}
+	
+	
+function calcularImc(){
+		var peso = form2.peso.value;
+		var altura = form2.altura.value;
+		var resultado;
+		resultado = peso/(altura*altura);
+		alert ("O seu IMC é, "+resultado);
+}
+
+</script>
+
+<style>
+
+h2 {background-color:orange;
+	text-align: center;
+	}
+	
+body{background-color: gray;
+}
+
+</style>
+
+<body>
+<h2>Preenchimento de formulário</h2>
+<form name="form1"  method="post" onSubmit="return validar()">
+	Nome: <input name="nome" id="nome" type="text"><br /><br />
+	Email: <input name="email" type="text"><br /><br />
+	Cidade: <input name="cidade" type="text"><br /><br />
+	<input type="submit" name="sbt" value="Enviar" />
+</form>
+<br /><br /><br /><br />
+
+<h2>Calcular IMC</h2>
+<form name="form2"  method="post" onSubmit="return calcularImc()">
+	Informe seu Peso: <input name="peso" id="nome" type="text"><br /><br />
+	Informe sua Altura: <input name="altura" type="text"><br /><br />
+	<input type="submit" name="sbt" value="Calcular IMC" />
+</form>
+
+
+
+<table border="1">
+	<tr>
+		<th>Dia</th>
+		<th>Valor</th>
+		<th>Quantidade</th>
+	</tr>
+	<tr>
+		<td>Segunda</td>
+		<td>350,00</td>
+		<td>1000</td>
+	</tr>
+	<tr>
+		<td>Terça</td>
+		<td>450,00</td>
+		<td>2000</td>
+	</tr>
+</table>
+<marquee behavior="alternate">
+	<img src="zangief.gif" width="250" height="300">
+</marquee>
+</body>
+</html>
